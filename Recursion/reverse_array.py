@@ -22,6 +22,22 @@ def ReverseArray2(ar):
     
     return ar;
 
+#Using recursion
+
+def ReverseArray3(ar, i, n):
+    if i >= n // 2:
+        return
+    ar[i], ar[n - i - 1] = ar[n - i - 1], ar[i]
+    ReverseArray3(ar, i + 1, n)
+
+
+
+
 ar=[1,2,3,4,5,6];
 print(ReverseArray(ar));
 print(ReverseArray2(ar));
+nums = [1, 2, 3, 4, 5]
+ReverseArray3(nums, 0, len(nums))
+print(nums)
+
+
