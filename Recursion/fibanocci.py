@@ -11,5 +11,15 @@ def fibanoci(N):
             ar[i]=ar[i-1]+ar[i-2];
         print(" ".join(str(num) for num in ar));
 
-fibanoci(5)
+
+#Using recursion
+
+def fibanocci2(N):
+    if N<=1:
+        return N;
+    last=fibanocci2(N-1);
+    secLast=fibanocci2(N-2);
+    return last+secLast;
+
+print(fibanocci2(4))
     
