@@ -30,16 +30,16 @@ def highest_frequency(ar):
     print("Highest frequency number:",maxEle ," ",maxCount);
     print("Lowest frequency number:",minEle ," ",minCount);
 
-
+#optimal solution 
 
 def highest_frequency2(ar):
 
     n=len(ar);
 
-    freq_map=defaultdict(int);
+    freq_map={};
 
-    for i in range(n):
-        freq_map[ar[i]]+=1;
+    for num in ar:
+        freq_map[num]=freq_map.get(num,0)+1;
 
     maxEle=0;
     minEle=0;
