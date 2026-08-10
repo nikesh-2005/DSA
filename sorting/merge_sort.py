@@ -29,4 +29,4 @@ def merge(ar,start,mid,end):
 
 ar=[8,3,1,7,4];
 mergeSort(ar,0,len(ar)-1);
-print(ar);
+print(ar)
