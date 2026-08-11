@@ -15,7 +15,7 @@ def quick(ar,low,high):
             i+=1;
             ar[i],ar[j]=ar[j],ar[i];
     ar[i+1],ar[high]=ar[high],ar[i+1];
-    return i+1;
+    return i+1
 
 
 ar=[2,9,4,7,6,4,1];
