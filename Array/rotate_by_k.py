@@ -21,6 +21,9 @@ def leftRotateByK(ar,k):
     for j in range(n-k,n):
         ar[j]=temp[j-(n-k)];
 
+
+
+
 ar=[1, 2, 3, 4, 5, 6, 7];
 leftRotateByK(ar,2);
 print(ar)
