@@ -12,8 +12,8 @@ def largestSubArray(ar,target):
 
     return count
 
-#Hashing
 
+#Hashing
 def largestSubArray2(ar,target):
     n=len(ar)
     count=0
@@ -33,6 +33,43 @@ def largestSubArray2(ar,target):
 
     return count
 
-   
-nums = [10, 5, 2, 7, 1, 9]
-print(largestSubArray2(nums,15))
+#Optimal
+
+def largestSubArray3(ar,target):
+
+    n=len(ar)
+    i,j,sum=0,0,ar[0]
+    count=0
+    # while i<n:
+    #     while j<=i and sum>target:
+    #         sum-=ar[j]
+    #         j+=1
+    #     if sum==target:
+    #         count=max(count,i-j+1)
+            
+    #     i+=1
+    #     if sum<target:
+    #         print("yoyoo")
+            
+    #         sum+=ar[i]
+            
+        
+    # return count
+    while i<n and j<n:
+
+        if target==sum:
+            count=max(count,i-j+1)
+            i+=1
+    
+        if sum>target and j<=i:
+            sum-=ar[j]
+            j+=1
+        elif sum<target:
+            i+=1
+            sum+=ar[i]
+    
+    return count
+
+
+nums = [2, 2, 3]
+print(largestSubArray3(nums,3))
